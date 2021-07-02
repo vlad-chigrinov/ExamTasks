@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 using ConsoleApp.Tasks;
 
 namespace ConsoleApp
@@ -35,6 +36,15 @@ namespace ConsoleApp
             RunFunctionWithName(Task14.Run);
             
             RunFunctionWithName(Task15.Run);
+            
+            RunFunctionWithName(Task18.Run);
+            
+            RunFunctionWithName(Task21.Run);
+            
+            RunFunctionWithName(Task22.Run);
+            
+            RunFunctionWithName(Task23.Run);
+
         }
 
         static void RunFunctionWithName(Action action) //чисто для красивого вывода в консоль
