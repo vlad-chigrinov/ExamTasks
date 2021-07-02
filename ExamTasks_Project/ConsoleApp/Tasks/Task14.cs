@@ -1,8 +1,9 @@
 ﻿using System;
+using System.IO;
 
 namespace ConsoleApp.Tasks
 {
-    public static class Task1
+    public static class Task14
     {
         public static void Run()
         {
@@ -11,7 +12,7 @@ namespace ConsoleApp.Tasks
                 {1, 2, 3, 4},
                 {1, 5, 3, 4},
                 {1, 2, 3, 4},
-                {1, 2, 3, -4}
+                {1, 2, 3, 4}
             };
             float[,] floatArr =
             {
@@ -25,25 +26,25 @@ namespace ConsoleApp.Tasks
                 {1.1f, 2f, 3f, 4f},
                 {1f, 5.9f, 3f, 4f},
                 {1f, 2f, 3.4f, 4f},
-                {1f, 2f, 3f, -4f}
+                {1f, 2f, 3f, 4f}
             };
 
-            int intMax = MaxMainDiagonalValue<int>(intArr);
-            Console.WriteLine($"Int max: {intMax}");
+            int intMax = MinMainDiagonalValue<int>(intArr);
+            Console.WriteLine($"Int min: {intMax}");
 
-            float floatMax = MaxMainDiagonalValue<float>(floatArr);
-            Console.WriteLine($"Float max: {floatMax}");
+            float floatMax = MinMainDiagonalValue<float>(floatArr);
+            Console.WriteLine($"Float min: {floatMax}");
 
-            double doubleMax = MaxMainDiagonalValue<double>(doubleArr);
-            Console.WriteLine($"Double max: {doubleMax}");
+            double doubleMax = MinMainDiagonalValue<double>(doubleArr);
+            Console.WriteLine($"Double min: {doubleMax}");
         }
-
-        private static T MaxMainDiagonalValue<T>(T[,] A) where T : IComparable
+        
+        private static T MinMainDiagonalValue<T>(T[,] A) where T : IComparable
         {
             T max = A[0, 0];
             for (int i = 1; i < A.GetLength(0); i++)
             {
-                if (max.CompareTo(A[i, i]) < 0)
+                if (max.CompareTo(A[i, i]) > 0)
                 {
                     max = A[i, i];
                 }

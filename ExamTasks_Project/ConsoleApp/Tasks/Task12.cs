@@ -2,7 +2,7 @@
 
 namespace ConsoleApp.Tasks
 {
-    public static class Task1
+    public static class Task12
     {
         public static void Run()
         {
@@ -13,6 +13,7 @@ namespace ConsoleApp.Tasks
                 {1, 2, 3, 4},
                 {1, 2, 3, -4}
             };
+            
             float[,] floatArr =
             {
                 {1.1f, 2f, 3f, 4f},
@@ -20,6 +21,7 @@ namespace ConsoleApp.Tasks
                 {1f, 2f, 3.4f, 4f},
                 {1f, 2f, 3f, -4f}
             };
+            
             double[,] doubleArr =
             {
                 {1.1f, 2f, 3f, 4f},
@@ -27,25 +29,20 @@ namespace ConsoleApp.Tasks
                 {1f, 2f, 3.4f, 4f},
                 {1f, 2f, 3f, -4f}
             };
-
-            int intMax = MaxMainDiagonalValue<int>(intArr);
-            Console.WriteLine($"Int max: {intMax}");
-
-            float floatMax = MaxMainDiagonalValue<float>(floatArr);
-            Console.WriteLine($"Float max: {floatMax}");
-
-            double doubleMax = MaxMainDiagonalValue<double>(doubleArr);
-            Console.WriteLine($"Double max: {doubleMax}");
+            
+            Console.WriteLine(MaxInColumn<int>(1, intArr));
+            Console.WriteLine(MaxInColumn<float>(1, floatArr));
+            Console.WriteLine(MaxInColumn<double>(2, doubleArr));
         }
 
-        private static T MaxMainDiagonalValue<T>(T[,] A) where T : IComparable
+        public static T MaxInColumn<T>(int columnNumber, T[,] array) where T : IComparable
         {
-            T max = A[0, 0];
-            for (int i = 1; i < A.GetLength(0); i++)
+            T max = array[0, columnNumber];
+            for (int i = 1; i < array.GetLength(1); i++)
             {
-                if (max.CompareTo(A[i, i]) < 0)
+                if (max.CompareTo(array[i,columnNumber]) < 1)
                 {
-                    max = A[i, i];
+                    max = array[i, columnNumber];
                 }
             }
 
