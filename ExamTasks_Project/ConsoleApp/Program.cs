@@ -10,12 +10,14 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-            
+
             RunFunctionWithName(Task1.Run);
-            
+
             RunFunctionWithName(Task2.Run);
 
             RunFunctionWithName(Task3.Run);
+
+            RunFunctionWithName(Task4.Run);
 
             RunFunctionWithName(Task5.Run);
 
@@ -24,27 +26,28 @@ namespace ConsoleApp
             RunFunctionWithName(Task7.Run);
 
             RunFunctionWithName(Task8.Run);
-            
+
             RunFunctionWithName(Task9.Run);
-            
+
             RunFunctionWithName(Task10.Run);
-            
+
             RunFunctionWithName(Task12.Run);
-            
+
             RunFunctionWithName(Task13.Run);
-            
+
             RunFunctionWithName(Task14.Run);
-            
+
             RunFunctionWithName(Task15.Run);
-            
+
             RunFunctionWithName(Task18.Run);
-            
+
             RunFunctionWithName(Task21.Run);
-            
+
             RunFunctionWithName(Task22.Run);
-            
+
             RunFunctionWithName(Task23.Run);
 
+            Console.ReadLine();
         }
 
         static void RunFunctionWithName(Action action) //чисто для красивого вывода в консоль
