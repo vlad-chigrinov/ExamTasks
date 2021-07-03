@@ -10,7 +10,7 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-            
+
             RunFunctionWithName(Task1.Run);
 
             RunFunctionWithName(Task2.Run);
@@ -41,9 +41,9 @@ namespace ConsoleApp
 
             RunFunctionWithName(Task15.Run);
 
-            //RunFunctionWithName(Task16.Run);
+            RunFunctionWithName(Task16.Run);
 
-            //RunFunctionWithName(Task17.Run);
+            RunFunctionWithName(Task17.Run);
 
             RunFunctionWithName(Task18.Run);
 
