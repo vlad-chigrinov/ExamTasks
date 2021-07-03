@@ -10,7 +10,7 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-
+            
             RunFunctionWithName(Task1.Run);
 
             RunFunctionWithName(Task2.Run);
