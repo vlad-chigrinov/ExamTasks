@@ -1,17 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConsoleApp.Tasks
 {
     class Task19
     {
-        //Разработайте класс STUDENT,
-        //в котором хранится информация о фамилии учащегося, его адрес и средний балл.
-        //В классе должны быть реализованы три конструктора,
-        //а также методы, позволяющие присваивать значения полям класса и выводить их на экран.
         public static void Run()
         {
             STUDENT student1 = new STUDENT();
