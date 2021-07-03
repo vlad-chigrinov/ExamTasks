@@ -29,11 +29,13 @@ namespace ConsoleApp.Tasks
                 get => firstName;
                 set => firstName = value;
             }
+
             public string SecondName
             {
                 get => secondName;
                 set => secondName = value;
             }
+
             public DateTime Birthday
             {
                 get => birthday;
@@ -73,25 +75,20 @@ namespace ConsoleApp.Tasks
 
             public int CompareTo(object obj)
             {
-                
-                    Person pers = obj as Person;
-                    if (pers != null)
-                    {
-                        return FirstName.CompareTo(pers.FirstName);
-                    }
-                    else
-                    {
-                        throw new Exception("Invalid compartion");
-                        return -2;
-                    }
+                if (obj is Person p1)
+                {
+                    return FirstName.CompareTo(p1.FirstName);
+                }
+                else
+                {
+                    throw new Exception("Invalid compartion");
+                    return -2;
+                }
             }
 
             public int Compare(object obj1, object obj2)
             {
-                var p1 = obj1 as Person;
-                var p2 = obj2 as Person;
-
-                if (p1 != null && p2 != null)
+                if (obj1 is Person p1 && obj2 is Person p2)
                 {
                     return p1.CompareTo(p2);
                 }
