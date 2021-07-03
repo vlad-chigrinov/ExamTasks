@@ -61,13 +61,13 @@ namespace ConsoleApp
 
             //RunFunctionWithName(Task25.Run);
 
-            //RunFunctionWithName(Task26.Run);
+            RunFunctionWithName(Task26.Run);
 
-            //RunFunctionWithName(Task27.Run);
+            RunFunctionWithName(Task27.Run);
 
-            //RunFunctionWithName(Task28.Run);
+            RunFunctionWithName(Task28.Run);
 
-            //RunFunctionWithName(Task29.Run);
+            RunFunctionWithName(Task29.Run);
 
             //RunFunctionWithName(Task30.Run);
 
