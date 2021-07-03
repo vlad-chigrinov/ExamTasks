@@ -17,83 +17,88 @@ namespace ConsoleApp.Tasks
             Console.WriteLine(p2.ToShortString());
             Console.WriteLine();
         }
-        
+
         private class Person : IComparable, IComparer
         {
-            private string name;
+            private string firstName;
             private string secondName;
-            private DateTime birthDate;
+            private DateTime birthday;
 
-            public string Name { get { return name; } }
-            public string SecondName { get { return secondName; } }
-            public DateTime BirthDate { get { return birthDate; } }
-            public int BirthDateYear { get { return birthDate.Year; }
-                set
-                {
-                    birthDate = new DateTime(value, birthDate.Month, birthDate.Day);
-                    GC.Collect();
-                }
+            public string FirstName
+            {
+                get => firstName;
+                set => firstName = value;
+            }
+            public string SecondName
+            {
+                get => secondName;
+                set => secondName = value;
+            }
+            public DateTime Birthday
+            {
+                get => birthday;
+                set => birthday = value;
+            }
+
+            public int BirthdayYear
+            {
+                get => birthday.Year;
+                set => birthday = new DateTime(value, birthday.Month, birthday.Day);
             }
 
             public Person()
             {
-                name = "Danny";
+                firstName = "Danny";
                 secondName = "Jonson";
-                birthDate = new DateTime(2000, 1, 1);
+                birthday = new DateTime(2000, 1, 1);
             }
 
-            public Person(string Name, string SecondName, DateTime BirthDate)
+            public Person(string firstName, string secondName, DateTime birthday)
             {
-                name = Name;
+                firstName = firstName;
                 secondName = SecondName;
-                birthDate = BirthDate;
+                birthday = birthday;
             }
 
             public override string ToString()
             {
-                return $"{Name};{SecondName};{BirthDate.Date}";
+                return $"{FirstName} {SecondName}\n" +
+                       $"{Birthday.Date.ToShortDateString()}";
             }
 
             public virtual string ToShortString()
             {
-                return Name;
+                return $"{FirstName} {SecondName}";
             }
 
             public int CompareTo(object obj)
             {
-                try
-                {
+                
                     Person pers = obj as Person;
                     if (pers != null)
-                        return Name.CompareTo(pers.Name);
+                    {
+                        return FirstName.CompareTo(pers.FirstName);
+                    }
                     else
-                        throw new Exception("Invalid comparation");
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.Message);
-                }
-                GC.Collect();
-                return -2;
+                    {
+                        throw new Exception("Invalid compartion");
+                        return -2;
+                    }
             }
 
-            public int Compare(object x, object y)
-            {                
-                if ((x as Person).birthDate.CompareTo((y as Person).birthDate) != 0)
+            public int Compare(object obj1, object obj2)
+            {
+                var p1 = obj1 as Person;
+                var p2 = obj2 as Person;
+
+                if (p1 != null && p2 != null)
                 {
-                    return (x as Person).birthDate.CompareTo((y as Person).birthDate);
-                }
-                else if ((x as Person).birthDate.CompareTo((y as Person).birthDate) != 0)
-                {
-                    return (x as Person).birthDate.CompareTo((y as Person).birthDate);
-                }
-                else if ((x as Person).birthDate.CompareTo((y as Person).birthDate) != 0)
-                {
-                    return (x as Person).birthDate.CompareTo((y as Person).birthDate);
+                    return p1.CompareTo(p2);
                 }
                 else
                 {
-                    return 0;
+                    throw new Exception("Invalid compartion");
+                    return -2;
                 }
             }
         }
