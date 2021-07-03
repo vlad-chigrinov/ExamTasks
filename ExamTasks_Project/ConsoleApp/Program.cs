@@ -47,17 +47,15 @@ namespace ConsoleApp
 
             RunFunctionWithName(Task18.Run);
 
-            //RunFunctionWithName(Task19.Run);
+            RunFunctionWithName(Task19.Run);
 
-            //RunFunctionWithName(Task20.Run);
+            RunFunctionWithName(Task20.Run);
 
             RunFunctionWithName(Task21.Run);
 
             RunFunctionWithName(Task22.Run);
 
             RunFunctionWithName(Task23.Run);
-
-            //RunFunctionWithName(Task24.Run);
 
             //RunFunctionWithName(Task25.Run);
 
@@ -68,14 +66,6 @@ namespace ConsoleApp
             RunFunctionWithName(Task28.Run);
 
             RunFunctionWithName(Task29.Run);
-
-            //RunFunctionWithName(Task30.Run);
-
-            //RunFunctionWithName(Task31.Run);
-
-            //RunFunctionWithName(Task32.Run);
-
-            //RunFunctionWithName(Task33.Run);
 
             Console.ReadLine();
         }
