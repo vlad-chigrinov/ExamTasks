@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
 
 namespace ConsoleApp.Tasks
 {
@@ -52,7 +51,7 @@ namespace ConsoleApp.Tasks
 
             public override string ToString()
             {
-                return $"{Name};{SecondName};{BirthDate}";
+                return $"{Name};{SecondName};{BirthDate.Date}";
             }
 
             public virtual string ToShortString()
