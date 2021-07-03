@@ -61,7 +61,6 @@ namespace ConsoleApp
 
             //RunFunctionWithName(Task25.Run);
 
-<<<<<<< HEAD
             RunFunctionWithName(Task26.Run);
 
             RunFunctionWithName(Task27.Run);
@@ -69,15 +68,6 @@ namespace ConsoleApp
             RunFunctionWithName(Task28.Run);
 
             RunFunctionWithName(Task29.Run);
-=======
-            //RunFunctionWithName(Task26.Run);
-
-            //RunFunctionWithName(Task27.Run);
-
-            //RunFunctionWithName(Task28.Run);
-
-            //RunFunctionWithName(Task29.Run);
->>>>>>> parent of 3ba5f58 (Revert "Доделал 11 задание")
 
             //RunFunctionWithName(Task30.Run);
 
