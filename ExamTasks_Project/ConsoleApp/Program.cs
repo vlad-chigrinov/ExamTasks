@@ -10,7 +10,7 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-
+            
             RunFunctionWithName(Task1.Run);
 
             RunFunctionWithName(Task2.Run);
@@ -46,7 +46,15 @@ namespace ConsoleApp
             RunFunctionWithName(Task22.Run);
 
             RunFunctionWithName(Task23.Run);
-
+            
+            RunFunctionWithName(Task26.Run);
+            
+            RunFunctionWithName(Task27.Run);
+            
+            RunFunctionWithName(Task28.Run);
+            
+            RunFunctionWithName(Task29.Run);
+            
             Console.ReadLine();
         }
 
